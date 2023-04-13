@@ -1,0 +1,216 @@
+/* change the font of the whole page */
+html{
+	font-family: sans-serif;
+}
+
+/* Making the button fixed at the top right corner so that the use can switch on and off the dark mode anytime */
+#btn-dark-light-mode{
+	position: fixed;
+	right: 18px;
+	top: 18px;
+	color: #9E5CF7;
+	background-color: #F7B968;
+}
+
+/* keeping the size of the news content of 80 viewport width */
+#pg-main{
+	width: 80vw;
+	margin: 0 auto;
+}
+
+/* color of page header links */
+#pg-header a{
+	color: yellow;
+}
+
+/* Making the position relative so that the links are behind the header and when the user scrolls the links are on the top of the page*/
+#pg-header {
+	color: white;
+	background-color: steelblue;
+	text-align: center;
+	padding-top: 5px;
+	position: relative;
+	top: -25px;
+}
+
+/* changing the background color of the navigation bar and setting a padding and making the position fixed so the user can jump to any page at any time*/
+#nav{
+	background-color: black;
+	color: white;
+	padding: 0px 18px 0px 18px;
+	position: fixed;
+	width: 100vw;
+}
+
+/* changing the list style type of dot to no style */
+#nav li{
+	display: inline-block;
+	list-style-type: none;
+	padding: 0px 18px 0px 18px;
+}
+
+#nav ul{
+	display: inline-block;
+	list-style-type: none;
+	padding: 0px 18px 0px 18px;
+	position: relative;
+	text-align: center;
+}
+
+#nav h2{
+	display: inline-block;
+}
+
+#featured-news{
+	display: grid;
+	grid-row: 2;
+	grid-column: 2;
+	grid-template-areas: "heading heading2" "fn1 fn2";
+}
+
+#featured-news > h2{
+	grid-area: 1 / 1;
+}
+
+#f-news1{
+	grid-area: fn1;
+	padding: 5px;
+}
+
+#f-news1 > img{
+	width: 400px;
+}
+
+#f-news2{
+	grid-area: fn2;
+	padding: 5px;
+}
+
+footer{
+	background-color: black;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+/* removing underline from the links */
+header a:link {
+	text-decoration: none;
+}
+
+/* chaning the color of visited links to pink */
+a:visited {
+	color: rgb(255, 104, 255);
+}
+
+/* chaning the links to green when a mouse hover over them */
+a:hover {
+	background-color: rgb(85, 228, 116);
+}
+
+/* 
+	CSS padding Property by www.w3schools.com
+	Author: -
+	URL: https://www.w3schools.com/cssref/pr_dim_line-height.asp
+	Date accessed: 07 Feb 2021 
+*/
+                        
+/* 
+	How to insert line break before an element using CSS? by www.geeksforgeeks.org
+	Author: AmanAgarwal6
+	URL: https://www.geeksforgeeks.org/how-to-insert-line-break-before-an-element-using-css/
+	Date accessed: 07 Feb 2021 
+*/
+
+p {
+	line-height: 2;
+	/* white-space: pre-line; */
+}
+
+
+/* For Tablet View */
+@media screen and (max-width:1200px) and (min-width:840px){
+	#pg-main {
+		width: 90vw;
+		display: grid;
+		grid-template-rows: repeat(3, auto);
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: "featured-news1 featured-news1 featured-news1 "
+		"hali-zone hali-zone hali-zone "
+		"nat-int edu health";
+	}
+	#featured-news{
+		grid-row: 1;
+		grid-column: 1 / -1;
+		padding: 5px;
+	}
+	#featured-news > h2{
+		text-align: left;
+	}
+	#hali-zone {
+		grid-area: hali-zone;
+		padding: 5px;
+	}
+	#nat-int {
+		grid-area: nat-int;
+		padding: 5px;
+	}
+	#edu {
+		grid-area: edu;
+		padding: 5px;
+	}
+	#health {
+		grid-area: health;
+		padding: 5px;
+	}
+	p:hover{
+		background-color: rgb(150, 150, 150);
+	}
+}
+
+
+/* For Mobile Phones */
+@media screen and (max-width: 840px){
+	#pg-main {
+		width: 95vw;
+		display: grid;
+		grid-template-rows: repeat(6, auto);
+		grid-template-areas: "fn11"
+		"hali-zone"
+		"nat-int"
+		"edu"
+		"health";
+	}	
+	/*
+		CSS to prevent child element from inheriting parent styles [duplicate] from stackoverflow.com
+		Author:  Boldewyn
+		URL: https://stackoverflow.com/questions/5080365/css-to-prevent-child-element-from-inheriting-parent-styles
+		Date accessed: 12 March 2021
+	*/
+	/* Set the display property for this to inline block so as to not inherit the parent's css property */
+	#featured-news {
+		display: inline-block;
+		grid-area: fn11;
+	}
+	#hali-zone {
+		grid-area: hali-zone;
+		padding: 5px;
+	}
+	#nat-int {
+		grid-area: nat-int;
+		padding: 5px;
+	}
+	#edu {
+		grid-area: edu;
+		padding: 5px;
+	}
+	#health {
+		grid-area: health;
+		padding: 5px;
+	}
+	p:hover{
+		background-color: rgb(150, 150, 150);
+	}
+	
+}
