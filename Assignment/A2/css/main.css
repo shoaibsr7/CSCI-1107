@@ -1,0 +1,124 @@
+/* change the font of the whole page */
+html{
+	font-family: sans-serif;
+}
+
+/* keeping the size of the news content of 80 viewport width */
+#pg-main{
+	width: 80vw;
+	margin: 0 auto;
+}
+
+/* color of page header links */
+#pg-header a{
+	color: yellow;
+}
+
+#pg-header {
+	color: white;
+	background-color: steelblue;
+	text-align: center;
+	padding-top: 5px;
+}
+
+/* changing the background color of the navigation bar and setting a padding to make it look like the sample */
+#nav{
+	background-color: black;
+	color: white;
+	padding: 0px 18px 0px 18px;
+}
+
+/* changing the list style type of dot to no style */
+#nav li{
+	display: inline-block;
+	list-style-type: none;
+	padding: 0px 18px 0px 18px;
+}
+
+#nav ul{
+	display: inline-block;
+	list-style-type: none;
+	padding: 0px 18px 0px 18px;
+}
+
+#nav h2{
+	display: inline-block;
+}
+
+#featured-news{
+	margin-bottom: 400px;
+}
+
+/* float the image to make the website look like the sample */
+#f-news1 img{
+	width: 360px;
+	float: right;
+}
+
+#f-news1 h3{
+	text-align: center;
+}
+#f-news1 h4{
+	text-align: center;
+}
+
+#f-news2 h3	{
+	text-align: center;
+}
+#f-news2 h4{
+	text-align: center;
+}
+
+#featured-news h2{
+	text-align: center;
+}
+
+/* float the paragraph to the left of the image acheive the look in the sample */
+#f-news1{
+	float: left;
+	width: 49%;
+}
+
+/* float the paragraph to the right of the image acheive the look in the sample */
+#f-news2{
+	float: right;
+	width: 49%;
+}
+
+footer{
+	background-color: black;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 5px;
+}
+
+/* removing underline from the links */
+header a:link {
+	text-decoration: none;
+}
+
+/* chaning the color of visited links to pink */
+a:visited {
+	color: rgb(255, 104, 255);
+}
+
+/* chaning the links to green when a mouse hover over them */
+a:hover {
+	background-color: rgb(85, 228, 116);
+}
+
+/* CSS padding Property by www.w3schools.com
+Author: -
+URL: https://www.w3schools.com/cssref/pr_dim_line-height.asp
+Date accessed: 07 Feb 2021 */
+                        
+/* How to insert line break before an element using CSS? by www.geeksforgeeks.org
+Author: AmanAgarwal6
+URL: https://www.geeksforgeeks.org/how-to-insert-line-break-before-an-element-using-css/
+Date accessed: 07 Feb 2021 */
+
+p {
+	line-height: 2;
+	/* white-space: pre-line; */
+}
