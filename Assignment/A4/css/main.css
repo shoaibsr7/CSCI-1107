@@ -1,0 +1,211 @@
+/*
+ * CSCI 1170: Introduction to Web Design and Development
+ * Winter 2021 (Online edition)
+ * Author: Dr. Raghav V. Sampangi (raghav@cs.dal.ca)
+ *
+ * This file contains the main CSS file for all pages on this website.
+ * 
+ */
+
+/* General web page styles */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main container styles */
+.pg-header {
+	height: 10vh;
+	background-color: steelblue;
+	color: white;
+	display: flex;
+	align-items: center;
+	padding: 1em;
+}
+.pg-main-content {
+	min-height: 60vh;
+	padding: 1em;
+}
+.pg-footer {
+	height: 10vh;
+	background-color: black;
+	color: white;
+	padding: 1em;
+}
+
+/* Header content styles */
+.pg-header > h1 {
+	margin: 0;
+	flex: 1;
+}
+
+/* Heading styles: applies to both H2 and H3 */
+h2, h3 {
+	color: steelblue;
+	font-weight: lighter;
+}
+
+/* Main navigation styles */
+.pg-main-nav {
+	width: 400px;
+}
+.pg-main-nav ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+.pg-main-nav a:link,
+.pg-main-nav a:visited {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.pg-main-nav a:hover,
+.pg-main-nav a:active {
+	color: gold;
+}
+
+/* Image styling */
+.img-link-container {
+	display: flex;
+	justify-content: space-between;
+}
+.sinfo-img {
+	width: 24vw;
+}
+
+/* My Styling */
+
+/* Assigning header, main content and footer appropriate area */
+body{
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas: "pg-header pg-header pg-header pg-header"
+	"pg-main-content pg-main-content pg-main-content pg-main-content"
+	"pg-footer pg-footer pg-footer pg-footer";
+}
+
+.pg-header{
+	grid-area: pg-header;
+}
+
+.pg-main-content{
+	grid-area: pg-main-content;
+}
+
+.pg-footer{
+	grid-area: pg-footer;
+}
+
+/*
+Border-collapse
+Author: -
+URL: https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse
+Date accessed: 29 March 2021
+*/
+
+/* 
+A Table With Borders Only On The Inside
+Author: Chris Coyier
+URL: https://css-tricks.com/table-borders-inside/ 
+Date accessed: 29 March 2021
+*/
+
+/* Table Styling */
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#tableContent{
+	padding: 10px 0 10px 0;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: auto; 
+	border-bottom: 1.5px solid gray;
+	margin: 0 0 20px 0;
+}
+
+#tableContent :hover{
+	border: 2px dashed blue;
+}
+
+#courseInstructorBold, #EnrollmentMax, 
+#EnrollmentCurrent, #EnrollmentAvailability{
+	font-weight: bold;
+}
+
+#courseInstructor, #location, #schedule, #max, #currentEnrollment,  #available{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#courseCode{
+	text-align: left;
+	color: steelblue;
+}
+
+#courseInstructor, #schedule, #currentEnrollment{
+	background-color: rgba(70, 131, 180, 0.37);
+	padding: 10px;
+}
+#location, #max, #available {
+	background-color: rgba(255, 255, 0, 0.336);
+	padding: 10px;
+}
+
+
+#schedule, #currentEnrollment, #location, #max{
+	margin: 20px;
+}
+#courseInstructor{
+	margin: 20px 20px 20px 0;
+}
+#available{
+	margin: 20px 0 20px 20px;
+}
+
+
+/* For Mobile Phones */
+@media screen and (max-width: 840px){
+	.pg-main-content{
+		font-size: 19.2px;
+	}
+
+	.pg-header {
+		flex-direction: column;
+	}
+
+/* 
+	CSS Flex Container
+	Author: -
+	URL: https://www.w3schools.com/css/css3_flexbox_container.asp
+	Date accessed: 29 March 2021 
+*/
+
+	.img-link-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.sinfo-img {
+		width: 90vw;
+	}
+
+	.s-info {
+		display: grid;
+	}
+
+	#tableContent{
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(6, 1fr); 
+	}
+
+	#courseInstructor, #available{
+		margin: 20px;
+	}
+}
